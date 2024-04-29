@@ -1,1 +1,3 @@
-# dsa_training
+# DSA Training
+
+Practice for DSA
