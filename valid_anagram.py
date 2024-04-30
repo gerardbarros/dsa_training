@@ -37,3 +37,8 @@ def validAnagram(s, t):
             return False
         
     return True
+    #can also use Counter(s) == Counter(t) since python can count chars for you in an arr
+    '''
+    Follow up: 
+        return sorted(s) == sorted(t)
+    '''
