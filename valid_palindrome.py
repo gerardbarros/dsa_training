@@ -25,31 +25,32 @@ s consists only of printable ASCII characters.
 '''
 
 def validPalindrome(str):
-    newStr = ''
+# Solution using built in methods
+    # newStr = ''
 
-    for char in str:
-        if char.isalnum():
-            newStr += char.lower()
-    return newStr == newStr[::-1]
+    # for char in str:
+    #     if char.isalnum():
+    #         newStr += char.lower()
+    # return newStr == newStr[::-1]
 
 # Solution using pointers:
 # def validPalindrome(str):
-#     l,r = 0, len(str) - 1
+    l,r = 0, len(str) - 1
 
-#     while l < r:
-#         while l and not alphaNum(str[l]):
-#             l += 1
-#         while r > l and not alphaNum(str[r]):
-#             r -= 1
-#         if str[l].lower() != str[r].lower():
-#             return False
-#         l, r = l + 1, r - 1
-#     return True
+    while l < r:
+        while l and not alphaNum(str[l]):
+            l += 1
+        while r > l and not alphaNum(str[r]):
+            r -= 1
+        if str[l].lower() != str[r].lower():
+            return False
+        l, r = l + 1, r - 1
+    return True
 
-# def alphaNum(char):
-#     (ord('A') <= ord(char) <= ord('Z') or 
-#         ord('a') <= ord(char) <= ord('z') or 
-#         ord('0') <= ord(char) <= ord('9'))
+def alphaNum(char):
+    return (ord('A') <= ord(char) <= ord('Z') or 
+        ord('a') <= ord(char) <= ord('z') or 
+        ord('0') <= ord(char) <= ord('9'))
 
 
 print(validPalindrome('A man, a plan, a canal: Panama'))
