@@ -19,7 +19,7 @@ It is guaranteed that the answer is unique.
 Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 '''
 
-def topKFrequent(nums, k = int):
+def topKFrequent(nums, k):
     count = {}
     freq = [[] for i in range(len(nums) + 1)]
 
