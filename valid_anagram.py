@@ -41,4 +41,5 @@ def validAnagram(s, t):
     '''
     Follow up: 
         return sorted(s) == sorted(t)
+        not the most efficient solution 
     '''
