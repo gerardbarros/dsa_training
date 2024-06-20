@@ -20,6 +20,7 @@ The number of nodes in the tree is in the range [0, 104].
 def maxDepth(root):
     stack = [[root, 1]]
     res = 0 # if starts at 0 so if there is null rootnode, loop will execute but if wont start and rs stays 0
+    
     while stack: #stack not empty
         node, depth = stack.pop() #pop 2 vals
 
